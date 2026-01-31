@@ -1,9 +1,21 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Custom LEO Menu'
-description 'Standalone LEO Interaction Menu'
-version '1.1.0'
+author 'Custom LEO Core'
+description 'Standalone LEO System with ox_lib'
+version '1.0.0'
 
-client_script 'client.lua'
-server_script 'server.lua'
+shared_scripts {
+    '@ox_lib/init.lua',
+    'config.lua',
+    'locales/*.lua',
+    'shared/utils.lua'
+}
+
+client_scripts {
+    'client/*.lua'
+}
+
+server_scripts {
+    'server/*.lua'
+}
